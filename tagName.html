@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li>Bread</li>
+      <li>Cookies</li>
+    </ul>
+    <ul>
+      <li>Banana</li>
+      <li>Pear</li>
+      <li>Apple</li>
+    </ul>
+    <p>Click the button to change the item inside ul elment</p>
+    <button onclick="showSomething();">Click</button>
+    <script>
+      function showSomething() {
+        let list = document.getElementsByTagName('ul')[1]
+        list.getElementsByTagName('li')[1].innerHTML = 'Cucumber'
+      }
+    </script>
+  </body>
+</html>

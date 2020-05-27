@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="change">
+      <p class="child">A p element with class "child" in a div</p>
+      <p class="child">Another p element with class "child" in a div</p>
+      <p>
+        A p element in a
+        <span class="child">span element with class name child</span>
+        inside p elment
+      </p>
+      <button onclick="changeColor();">Change Color</button>
+    </div>
+    <script>
+      let changeColor = function () {
+        let x = document.getElementById('change')
+        let y = x.getElementsByClassName('child')
+        let i
+        for (i = 0; i < y.length; i++) {
+          y[i].style.backgroundColor = 'skyblue'
+        }
+      }
+
+      //   changeColor();
+    </script>
+  </body>
+</html>
