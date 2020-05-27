@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Select a new car from the list</h1>
+    <select id="mySelect" onchange="showResult()">
+     <option value="Nothing" >Choose</option>
+      <option value="Tesla">Tesla</option>
+      <option value="Bolt">Bolt</option>
+      <option value="BMW">BMW</option>
+      <option value="Audi">Audi</option>
+    </select>
+    <h1 id="output"></h1>
+    <script>
+      let showResult = function () {
+        let x = document.getElementById('mySelect').value;
+        if( x==="Nothing"){
+            document.getElementById("output").innerHTML = `You selected ${x}. That's a bad choice!`;
+            }else{
+        document.getElementById("output").innerHTML = `You selected ${x}. That's a nice choice!`;
+            }
+        }
+      
+    </script>
+  </body>
+</html>
