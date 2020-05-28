@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Slideshow</title>
+    <link rel="stylesheet" href="slideshow.css" />
+    <script src="slideshow.js"></script>
+  </head>
+  <body onload="javascript:setInterval('playImageArray()', 3000)">
+    <div id="container">
+      <header>
+        <h1>Paradise 2020</h1>
+      </header>
+
+      <!-- slide section -->
+      <div id="slideshow">
+        <!-- will show one image and will be replaced automaticall with other images -->
+        <img id="slide" src="images/ocean1.jpg" alt="slideshow" />
+        <!-- navigation button at the bottom of slideshow -->
+        <div id="slidenav">
+          <a href="#" onclick="slideshow(0)" class="dot">1</a>
+          <a href="#" onclick="slideshow(1)" class="dot">2</a>
+          <a href="#" onclick="slideshow(2)" class="dot">3</a>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p>Copyright &copy; Web Dev II 2020</p>
+    </footer>
+  </body>
+</html>
