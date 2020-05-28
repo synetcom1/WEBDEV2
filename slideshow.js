@@ -8,7 +8,7 @@ imgArray = [
 ];
 
 // Replace with you image id(manual change)
-function slidshow(slide_num) {
+function slideshow(slide_num) {
   document.getElementById("slide").src = imgArray[slide_num][0];
   document.getElementById("slide").alt = imgArray[slide_num][1];
 }

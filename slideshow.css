@@ -43,3 +43,15 @@ header {
 #slideshow img {
   width: 100%;
 }
+#slide {
+  animation: fader 3s ease infinite;
+}
+
+@keyframes fader {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
