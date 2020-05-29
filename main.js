@@ -55,9 +55,27 @@ const ages = [25, 34, 12, 46, 78, 33, 22, 19, 18, 16, 89, 55, 60];
 // }
 // console.log(canDrink);
 
-const canDrink = ages.filter(function(age) {
-    if (age >= 21) {
-        return true;
-    }
-});
-console.log(canDrink);
+// const canDrink = ages.filter(age => {
+//     if (age >= 21) {
+//         return true;
+//     }
+// });
+// console.log(canDrink);
+
+// const itCompanies = companies.filter(function(company) {
+//     if (company.category === 'IT') {
+//         return true;
+//     }
+// });
+// const itCompanies2 = companies.filter(company => company.category === 'IT');
+
+// console.log(itCompanies2);
+
+//companies between 1800 and 2000
+
+// const specialCompanies = companies.filter(company => (company.start >= 1800 && company.start <= 1999));
+// console.log(specialCompanies);
+
+//companies had run more than 10 years
+const lastedTenYears = companies.filter(company => (company.end - company.start >= 10));
+console.log(lastedTenYears);

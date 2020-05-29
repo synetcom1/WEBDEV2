@@ -29,5 +29,4 @@ const doLoop2 = numbers => {
 document.addEventListener('click', function() {
     console.log('click');
 });
-
 document.addEventListener('click', () => console.log('click'));
