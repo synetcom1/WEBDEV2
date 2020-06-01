@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            background-color: coral;
+            border: 1px solid black;
+            padding: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>This one will show the difference of "useCapture" and "Bubbling"</p>
+    <div id="myDiv">
+        <p id="myP">Click here. This is Bubbling</p>
+    </div><br>
+    <div id="myDiv2">
+        <p id="myP2">Click here. This is Capturing</p>
+    </div>
+    <script src="capturing.js"></script>
+</body>
+
+
+</html>

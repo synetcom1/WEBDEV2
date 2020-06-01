@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="myList">
+        <li>Coffee</li>
+        <li>Chocolate</li>
+    </ul>
+
+    <button onclick="appendSomething();">Append Child</button>
+</body>
+<script>
+    const appendSomething = function () {
+        // let node = document.createElement("LI");
+        // let textNode = document.createTextNode("Ice Cream");
+        // node.appendChild(textNode);
+        // document.getElementById("myList").appendChild(node);
+
+        var node = document.createElement("LI");
+        var textnode = document.createTextNode("Ice Cream");
+        node.appendChild(textnode);
+
+        var list = document.getElementById("myList");
+        list.insertBefore(node, list.childNodes[2]);
+
+    };
+
+</script>
+
+</html>
