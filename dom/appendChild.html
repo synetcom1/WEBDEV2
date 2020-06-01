@@ -10,6 +10,7 @@
 <body>
     <ul id="myList">
         <li>Coffee</li>
+
         <li>Chocolate</li>
     </ul>
 
@@ -22,11 +23,11 @@
         // node.appendChild(textNode);
         // document.getElementById("myList").appendChild(node);
 
-        var node = document.createElement("LI");
-        var textnode = document.createTextNode("Ice Cream");
+        const node = document.createElement("LI");
+        const textnode = document.createTextNode("Ice Cream");
         node.appendChild(textnode);
 
-        var list = document.getElementById("myList");
+        const list = document.getElementById("myList");
         list.insertBefore(node, list.childNodes[2]);
 
     };

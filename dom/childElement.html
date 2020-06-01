@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="countElement();">Count Child Element</button>
+    <div id="myDiv">
+        <p>First p element</p>
+        <p>Second p element</p>
+    </div>
+    <h1 id="output"></h1>
+    <script>
+        const countElement = function () {
+            const c = document.getElementById('myDiv').childElementCount;
+            document.getElementById('output').innerHTML = c;
+
+        }
+    </script>
+</body>
+
+</html>
