@@ -10,15 +10,33 @@
 <body>
     <ul id="myList1">
         <li>Coffee</li>
-        <li>Tee</li>
+        <li>Tea</li>
     </ul>
+
     <ul id="myList2">
-        <li>Chocolate</li>
+        <li>Water</li>
         <li>Milk</li>
     </ul>
-    <button onclick="cloneMethod()">Clone it</button>
+
+    <p>Click the button to copy an item from one list to another.</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <p>Try changing the <em>deep</em> parameter to false, and only an empty
+        LI element will be cloned.</p>
+
     <script>
-        
+
+        function myFunction() {
+
+            var itm = document.getElementById("myList2").lastChild;
+
+            var cln = itm.cloneNode(true);
+
+            document.getElementById("myList1").appendChild(itm);
+
+        }
+
     </script>
 </body>
 
