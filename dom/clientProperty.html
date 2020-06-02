@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myDiv {
+            height: 250px;
+            width: 400px;
+            padding: 10px;
+            margin: 15px;
+            border: 5px solid red;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>clientHeight and clientWidth of an element</h1>
+    <button onclick="checkProperty()">Check Property</button>
+    <div id="myDiv">
+        <b>THis DIV's information</b>
+        height:250px;
+        width: 400px;
+        padding:10px;
+        margin:15px;
+        border:5px;
+        <p id="output"></p>
+    </div>
+    <script>
+        const checkProperty = function () {
+            const element = document.getElementById('myDiv');
+            let text = "Height including padding" + element.clientHeight + "px <br>";
+            text += "Width including padding" + element.clientWidth + "px";
+            document.getElementById('output').innerHTML = text;
+        }
+    </script>
+</body>
+
+</html>

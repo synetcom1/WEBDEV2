@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <h1 id="sample" style="color:red; opacity:0.3;">Opacity Check</h1>
+
+    <script>
+
+        let h1Element = document.getElementById('sample').style.opacity;
+        if (h1Element >= 1) {
+            document.getElementById('sample').style.color = "blue";
+        } else {
+            document.getElementById('sample').style.fontSize = "3em";
+        }
+    </script>
+</body>
+
+
+</html>
