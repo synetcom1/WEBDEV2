@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li id="item1">Coffee</li>
+        <li id="item2">Tea</li>
+        <li id="item3">Chocolate</li>
+    </ul>
+
+    <h1 id="output"></h1>
+    <button onclick="nextSiblingMethod()">Next Sibling</button>
+
+    <script>
+        const nextSiblingMethod = function () {
+            let x = document.getElementById('item1').nextElementSibling.innerHTML;
+            document.getElementById('output').innerHTML = x;
+        }
+    </script>
+</body>
+
+</html>

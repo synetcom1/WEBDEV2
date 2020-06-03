@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>inserAdjacentElement()</h1>
+    <p>We have p element</p>
+    <span style="color:red;">Span element</span>
+    <h2 id="myH2">Header h2</h2>
+    <p>Let's click the button below</p>
+    <button onclick="insertMethod()">Move soan</button>
+    <script>
+        const insertMethod = function () {
+            let s = document.getElementsByTagName('span')[0];
+            let h = document.getElementById('myH2');
+            //h.insertAdjacentElement('afterbegin', s);
+            // h.insertAdjacentElement('afterend', s);
+            h.insertAdjacentElement('beforebegin', s);
+            // h.insertAdjacentElement('beforeend', s);
+        }
+    </script>
+</body>
+
+</html>
