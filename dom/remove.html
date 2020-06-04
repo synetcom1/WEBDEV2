@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Remove() DOM method</h1>
+    <p>this method will remove DOM element</p>
+    <h1 id="sample">This h1 element will be removed.</h1>
+    <button onclick="removeMethod()">Remove</button>
+    <script>
+        const removeMethod = function () {
+            const object1 = document.getElementById('sample');
+            object1.remove();
+        }
+    </script>
+</body>
+
+</html>

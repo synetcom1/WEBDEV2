@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul class="myList">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Ice Cream</li>
+    </ul>
+
+    <button onclick="removeChildMethod()">Remove Child</button>
+
+    <script>
+        const removeChildMethod = function () {
+            const list = document.getElementsByClassName('myList')[0];
+            list.removeChild(list.firstElementChild);
+        }
+
+        // nodes include white space
+    </script>
+</body>
+
+</html>

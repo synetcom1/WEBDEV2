@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('button').click(function () {
+                $('.changeSomething').toggle();
+            });
+        });
+    </script>
+    <style>
+        .changeSomething {
+            width: 500px;
+            height: 500px;
+            background-color: coral;
+            display: block;
+            margin: 0 auto;
+            line-height: 500px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <button>Toggle this element</button>
+    <p class="changeSomething">Show or hide</p>
+</body>
+
+</html>
