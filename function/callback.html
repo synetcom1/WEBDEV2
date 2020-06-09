@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        // $(function () {
+        //     $("button").click(function () {
+        //         $("p").hide("slow", function () {
+        //             alert("The paragraph is hidden now");
+        //         });
+        //     });
+        // });
+
+
+        // This one doesn't have callback function
+        $(function () {
+            $("button").click(function () {
+                $("p").hide(1000);
+                alert("The paragraph is hidden");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <button>Hide</button>
+    <p>Something is here</p>
+
+</body>
+
+</html>
