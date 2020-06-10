@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myProgress {
+            width: 100%;
+            background-color: #ddd;
+        }
+
+        #myBar {
+            width: 1%;
+            height: 30px;
+            background-color: coral;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Javascript Progress Bar</h1>
+    <h2 id="show"></h2>
+    <div id="myProgress">
+        <div id="myBar"></div>
+    </div>
+    <br>
+    <button onclick="move()">Click to show the pregress</button>
+    <script>
+        function move() {
+            let elem = document.getElementById("myBar");
+            let width = 1;
+            let id = setInterval(frame, 10);
+            function frame() {
+                if (width >= 100) {
+                    clearInterval(id);
+                } else {
+                    width++;
+                    elem.style.width = width + '%';
+                    document.getElementById("show").innerHTML = width + '%';
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
