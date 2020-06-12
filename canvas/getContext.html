@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="newcanvas" width="500" height="500"></canvas>
+    <script>
+        let zack = document.getElementById("newcanvas");
+        let ion = zack.getContext("2d");
+        ion.fillStyle = "#ff0000";
+        ion.fillRect(50, 10, 100, 200);
+
+    </script>
+</body>
+
+</html>
