@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $(".first").click(function () {
+                $('svg').toggle();
+            });
+        });
+
+        $(function () {
+            $(".second").click(function () {
+                $('svg').addClass("move");
+            });
+        });
+    </script>
+    <style>
+        .move {
+            transform: translate(250px);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Scalable Vector(Mathmatical Function) Graphics -->
+    <h1>SVG Circle</h1>
+    <svg width="200" height="200">
+        <circle cx="100" cy="100" r="85" stroke="blue" stroke-width="5" fill="red" />
+        <text x="50%" y="50%" text-anchor="middle" stroke="#fff" stroke-width="1px" dy=".3em">CENTER</text>
+
+    </svg>
+    <br>
+    <button class="first" onlick="move()">Click</button>
+    <br>
+    <button class="second">Move</button>
+</body>
+
+</html>
