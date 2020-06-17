@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+    <style>
+        li {
+            text-decoration: none;
+            list-style-type: none;
+            color: skyblue;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+
+<body>
+    <div ng-app="" ng-init="names=[
+{name:'John', country: 'Norway'},
+{name:'Hugo', country: 'Sweden'},
+{name:'Muntor', country: 'Denmark'}
+]">
+        <h1>Looping with array objects</h1>
+        <ul>
+            <li ng-repeat="p in names">{{p.name + ", "+ p.country}}</li>
+        </ul>
+
+    </div>
+</body>
+
+</html>

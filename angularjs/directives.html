@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+</head>
+
+<body>
+    <div ng-app="myApp" show-directive></div>
+
+    <script>
+        let app = angular.module("myApp", []);
+        
+        app.directive("showDirective", function () {
+            return {
+                template: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur ab ea possimus vero magni nam ducimus pariatur culpa quis animi."
+            };
+        });
+    </script>
+</body>
+
+</html>
