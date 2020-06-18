@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+    <style>
+        .check.ng-invalid {
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <form ng-app="" name="myForm">
+        Enter your name:
+        <input class="check" {type="text" name="myName" ng-model="myText" required>
+
+    </form>
+    <h1>This backgound will be skyblue whenever the requirement is not met</h1>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+    <style>
+        span {
+            color: skyblue;
+            font-size: 1.5em;
+
+        }
+    </style>
+</head>
+
+<body>
+    <form ng-app="" name="myForm">
+        Email:
+        <input type="email" name="myAddress" ng-model="text">
+        <br><span ng-show="myForm.myAddress.$error.email"> Not a vaild email address</span>
+    </form>
+    <h1>Enter your email address and will show it's not valid</h1>
+</body>
+
+</html>
