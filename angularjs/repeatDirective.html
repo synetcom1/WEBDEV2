@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+    <style>
+        th,
+
+        td {
+            border: 1px solid black;
+
+            padding: 5px
+        }
+
+        table {
+            width: 300px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body ng-app="myApp">
+    <div ng-controller="myController">
+        <table>
+            <thead>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Gender</th>
+                <th>Salary</th>
+            </thead>
+            <tr ng-repeat="employee in employees">
+                <td>{{employee.firstName}}</td>
+                <td>{{employee.lastName}}</td>
+                <td>{{employee.gender}}</td>
+                <td>{{employee.salary}}</td>
+            </tr>
+        </table>
+    </div>
+    <script src="repeatDirective.js"></script>
+</body>
+
+</html>
