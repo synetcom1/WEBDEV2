@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <!-- binding expression -->
+        10 + 20 = {{ 10 + 20 }}
+    </div>
+    <div>
+        <!-- Boolean -->
+        {{ 1 == 1 }}
+    </div>
+    <div>
+        <!-- JavaScript object -->
+        {{{name: "John", age: 40}.name}}
+    </div>
+    <div>
+        <!-- array -->
+        {{['John', 'Candy', 'Sally'][1]}}
+    </div>
+</body>
+
+</html>
