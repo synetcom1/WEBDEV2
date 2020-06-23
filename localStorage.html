@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        //Check whether the localStorage exists
+        if (localStorage) {
+            $(document).ready(function () {
+                $(".save").click(function () {
+                    // Get input name
+                    let firstName = $("#firstName").val();
+
+                    //Store the date
+                    localStorage.setItem("first_name", firstName);
+                    alert("Your first name is saved")
+                });
+                $(".access").click(function (ev) {
+                    ev.preventDefault();
+                    //Retrieve the data
+                    alert("Hi, " + localStorage.getItem("first_name"));
+                    document.getElementById("output").innerHTML = localStorage.getItem("first_name");
+                });
+
+            });
+        } else {
+            alert("Sorry  your browser doesn't support localStoarage")
+        }
+        document.getElementById("output").innerHTML = localStorage.getItem("first_name");
+    </script>
+</head>
+
+<body>
+    <form>
+        <label>FirstName: <input type="text" id="firstName"></label>
+        <button class="save">Save Name</button>
+        <button class="access">Get Name</button>
+    </form>
+    <div id="output"></div>
+</body>
+
+</html>
