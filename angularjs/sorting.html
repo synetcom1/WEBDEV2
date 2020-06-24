@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        td,
+        th {
+            border: 1px solid black;
+            padding: 1px;
+        }
+    </style>
+</head>
+
+<body ng-app="myApp">
+    <div ng-controller="myController">
+        Order By: <select ng-model="sortColumn">
+            <option value="name">Name ASC</option>
+            <option value="gender">Gender ASC</option>
+            <option value="dateOfBirth">Date of Birth ASC</option>
+            <option value="-salary">Salary DSC</option>
+        </select>
+        <table>
+            <thead>
+                <th>Name</th>
+                <th>Date of Birth</th>
+                <th>Gender</th>
+                <th>Salary(number)</th>
+                <th>Salary(currency)</th>
+            </thead>
+            <tbody>
+                <tr ng-repeat="employee in employees | orderBy : sortColumn">
+                    <td>{{employee.name | uppercase }}</td>
+                    <td>{{employee.dateOfBirth | date : dd/MM/yyyy}}</td>
+                    <td>{{employee.gender | lowercase}}</td>
+                    <td>{{employee.salary | number : 2 }}</td>
+                    <td>{{employee.salary | currency : "$ " : 2}}</td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="sorting.js"></script>
+</body>
+
+</html>
