@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        td,
+        th {
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+        .arrow-up {
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-bottom: 10px solid black;
+            display: inline-block;
+        }
+
+        .arrow-down {
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 10px solid black;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body ng-app="myApp">
+    <div ng-controller="myController">
+        <input type="text" placeholder="Search name" ng-model="searchText.name">
+        <input type="text" placeholder="Search city" ng-model="searchText.city">
+        <input type="checkbox" ng-model="exactMatch">Exact Match
+        <br><br>
+        <table>
+            <thead>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Salary</th>
+                <th>City</th>
+            </thead>
+            <tbody>
+                <tr ng-repeat="employee in employees | filter : searchText : exactMatch">
+                    <td>{{employee.name  }}</td>
+                    <td>{{employee.gender}}</td>
+                    <td>{{employee.salary | currency}}</td>
+                    <td>{{employee.city}}</td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="exactMatch.js"></script>
+</body>
+
+</html>
