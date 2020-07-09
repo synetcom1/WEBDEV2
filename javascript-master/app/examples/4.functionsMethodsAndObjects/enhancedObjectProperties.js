@@ -10,8 +10,10 @@ const pricePropName = "PRICE";
 const calculator = (name, price) => {
   return {
     name,
+    // name: name,
     add(n1, n2) {
       return n1 + n2;
+      // add: function(n1,n2)
     },
     [pricePropName.toLowerCase()] : price
   }

@@ -12,4 +12,4 @@ const calculatePay = (yearSalary, bonus = {
   return yearSalary + bonus.teamBonus + bonus.employeeBonus;
 }
 
-log(calculatePay(22000, {teamBonus: 10000, employeeBonus: 6000 }));
+log(calculatePay(22000, { teamBonus: 10000, employeeBonus: 6000 }));
